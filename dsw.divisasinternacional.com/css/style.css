@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #5e72e4;
+}
+form , .contenido{
+    width: 80%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    background-color: blue;
+    flex-direction: column;
+}
+
+footer {
+    height: 5%;
+    width: 100%;
+    background: #a855f7;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(94, 114, 228, 0.06);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+}
+
+
+
+
+span {
+    padding-top: 20px;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    top: 20px;
+    color: white;
+    display: inline-block;
+    font-size: 2rem;
+    text-shadow: 0 1px 0 #b7b7b7, 
+                 0 2px 0 #b7b7b7,
+                 0 3px 0 #b7b7b7,
+                 0 4px 0 #b7b7b7,
+                 0 5px 0 #b7b7b7,
+                 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent
+                 0 10px 0 transparent,
+                 0 10px 10px rgba(0, 0, 0.5);
+    animation: bounce 1s ease infinite alternate;
+}
+footer span:nth-child(2){
+    animation-delay: 0.1s;
+}
+
+footer span:nth-child(3){
+    animation-delay: 0.2s;
+}
+footer span:nth-child(4){
+    animation-delay: 0.3s;
+}
+footer span:nth-child(5){
+    animation-delay: 0.4s;
+}
+footer span:nth-child(6){
+    animation-delay: 0.5s;
+}
+footer span:nth-child(7){
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    100% {
+        top: -20px;
+        text-shadow: 0 1px, 0 #ccc,
+                     0 2px, 0 #ccc,
+                     0 3px, 0 #ccc,
+                     0 4px, 0 #ccc,
+                     0 5px, 0 #ccc,
+                     0 6px, 0 #ccc,
+                     0 7px, 0 #ccc,
+                     0 8px, 0 #ccc,
+                     0 9px, 0 #ccc,
+                     0 60px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+    }
+}
