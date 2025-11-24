@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Conversor de Divisas (AJAX)</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript" src="js/divisasinternacional.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Conversor de Divisas Internacional</h1>
-        </header>
-        <main class="contenido">
-            <form onsubmit="return convertir(event)">
-                <label for="opt_origen">Moneda Origen: *</label>
-                <select id="opt_origen" required>
-                </select>
-                <label for="opt_destino">Moneda Destino: *</label>
-                <select id="opt_destino" required>
-                </select>
-                <label for="txt_importe">Importe: *</label>
-                <input type="number" id="txt_importe" placeholder="Introduce el importe" step="any" required>
-                <label for="txt_tasa">Tasa de cambio:</label>
-                <input class="resultado" type="text" id="txt_tasa" readonly>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Divisas (AJAX)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/divisasinternacional.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Conversor de Divisas Internacional</h1>
+    </header>
+    <main class="contenido">
+        <form onsubmit="return convertir(event)">
+            <label for="opt_origen">Moneda Origen: *</label>
+            <select id="opt_origen" required>
+            </select>
+            <label for="opt_destino">Moneda Destino: *</label>
+            <select id="opt_destino" required>
+            </select>
+            <div class="container_input">
+                <label class="label_input" for="txt_importe">Importe: *</label>
+                <input class="form_input" type="number" id="txt_importe" placeholder="Introduce el importe" step="any"
+                    required>
+            </div>
+            <div class="container_input">
+                <label class="label_input" for="txt_tasa">Tasa de cambio:</label>
+                <input class="resultado form_input" type="text" id="txt_tasa" readonly>
+
+            </div>
+            <div>
                 <label for="txt_resultado">Resultado:</label>
                 <input class="resultado" type="text" id="txt_resultado" readonly>
-                <input type="button" value="Invertir" onclick="invertir()"/>
+            </div>
+            <div> <input type="button" value="Invertir" onclick="invertir()" />
                 <input type="submit" value="Convertir" />
-            </form>
-        </main>
-        <footer>
-            <span>Universidad </span>
-            <span>Veracruzana</span>
-            <span>- </span>
-            <span>Desarrollo </span>
-            <span>de </span>
-            <span>Sistemas </span>
-            <span>Web</span>
-        </footer>
-    </body>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <span>Universidad </span>
+        <span>Veracruzana</span>
+        <span>- </span>
+        <span>Desarrollo </span>
+        <span>de </span>
+        <span>Sistemas </span>
+        <span>Web</span>
+    </footer>
+</body>
+
 </html>

@@ -1,20 +1,76 @@
 body {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #5e72e4;
+    /*https://cssgradient.io/*/
+    background: #a600ff;
+    background: linear-gradient(122deg,rgba(166, 0, 255, 1) 0%, rgba(130, 6, 192, 1) 21%, rgba(112, 35, 140, 1) 47%, rgba(159, 126, 171, 1) 83%, rgba(219, 202, 230, 1) 100%);
 }
 form , .contenido{
-    width: 80%;
+    min-width: 60%;
+    max-width: 70%;
     display: flex; 
     justify-content: center;
     align-items: center;
     vertical-align: top;
-    background-color: blue;
+    background-color: rgb(197, 230, 14);
     flex-direction: column;
+    padding: 10px 0;;
 }
 
+/*INPUTS*/
+.container_input {
+    width: 90%;
+    max-width: 10rem;
+    height: 2rem;
+    position: relative;
+}
+
+.form_input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #121221;
+    border: 2px solid #fff;
+    border-radius: 0.5em;
+    outline: none;
+    color: #fff;
+    padding-left: 1em;
+
+}
+
+.label_input{
+    position: absolute;
+    background:#121221;
+    color: #fff;
+    font-family: sans-serif;
+    left: 1em;
+    top: .75em;
+    cursor: text;
+    transition: top 350ms ease-in, font-size 350ms ease-in;
+
+}
+
+.form_input:hover {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.form_input:focus {
+    border: 2px solid #00ffff;
+}
+
+input[type="text"]:focus ~ label,
+.form_input:not(:placeholder-shown)
+.form_input:not(:focus) ~ label {
+    top: -0.5em;
+    font-size: .75rem;
+    padding: 0 0.125em;
+}
+
+
+/*END INPUTS*/
+
+/*FOOTER*/
 footer {
     height: 5%;
     width: 100%;
@@ -30,9 +86,6 @@ footer {
     left: 0;
     z-index: 20;
 }
-
-
-
 
 span {
     padding-top: 20px;
@@ -90,6 +143,8 @@ footer span:nth-child(7){
                      0 60px 30px rgba(0, 0, 0, 0.3);
     }
 }
+/*END FOOTER*/
+
 
 @media (max-width: 700px) {
     footer {
