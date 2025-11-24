@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Días Festivos</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script type="text/javascript" src="js/diasfestivos.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Días Festivos</h1>
-        </header>
-        <main class="contenido">
-            <form onsubmit="return consultar()">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Días Festivos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/diasfestivos.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Días Festivos</h1>
+    </header>
+    <main class="contenido">
+        <form onsubmit="return consultar()" class="form-festivos">
+            <div class="campo-form">
                 <label for="cbx_pais">Selecciona un país:</label>
                 <select name="" id="cbx_pais">
                     <option value="MX" selected>México</option>
                     <option value="US">Estados Unidos</option>
                 </select>
-                &nbsp;
+            </div>
+
+            <div class="campo-form">
                 <label for="txt_anio">Selecciona un año:</label>
                 <input id="txt_anio" type="number" min="2000" max="2050" step="1" required />
-                &nbsp;
+            </div>
+
+            <div class="campo-form">
                 <label for="cbx_mes">Selecciona un mes:</label>
                 <select id="cbx_mes">
                     <option value="1" selected>Enero</option>
@@ -37,12 +44,17 @@
                     <option value="11">Noviembre</option>
                     <option value="12">Diciembre</option>
                 </select>
+            </div>
+
+            <div class="acciones-form">
                 <input type="submit" value="Consultar" />
-            </form>
-        </main>
-        <div id="div_resultados" class="resultados"></div>
-        <footer>
-            Universidad Veracruzana - Desarrollo de Sistemas Web
-        </footer>
-    </body>
+            </div>
+        </form>
+    </main>
+    <div id="div_resultados" class="resultados"></div>
+    <footer>
+        Universidad Veracruzana - Desarrollo de Sistemas Web
+    </footer>
+</body>
+
 </html>

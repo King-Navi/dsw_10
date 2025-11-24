@@ -82,7 +82,6 @@ function generarTarjeta(datos) {
     return '<div class="tarjeta">'+
            '    <h3>'+datos.name+'</h3>'+
            '    <h4>'+datos.date+'</h4>'+
-           '    <br>'+
-           '    '+datos.weekday.date.name+
+           '    <p class="weekday">'+datos.weekday.date.name+'</p>'+
            '</div>';
   }

@@ -2,26 +2,134 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100vw;
     /*https://cssgradient.io/*/
-    background: #a600ff;
+    background-size: cover;
+    background-repeat: no-repeat;
     background: linear-gradient(122deg,rgba(166, 0, 255, 1) 0%, rgba(130, 6, 192, 1) 21%, rgba(112, 35, 140, 1) 47%, rgba(159, 126, 171, 1) 83%, rgba(219, 202, 230, 1) 100%);
 }
-form , .contenido{
+h1 , label {
+    color: #fff;
+}
+
+.contenido {
     min-width: 60%;
     max-width: 70%;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    vertical-align: top;
-    background-color: rgb(197, 230, 14);
-    flex-direction: column;
-    padding: 10px 0;;
+    padding: 2rem 0;
 }
+
+form {
+    width: 100%;
+    max-width: 480px;
+
+    /* tarjeta flotando */
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form > div:last-of-type {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.select_group,
+.container_input,
+form > div:last-of-type {
+    width: 100%;
+    max-width: 18rem;
+    margin: 0 auto;
+}
+
+
+form input[type="button"],
+form input[type="submit"] {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    border: 2px solid #121221;
+    background: #121221;
+    color: #fff;
+    font-weight: 600;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+    transition: 
+        background 150ms ease-in,
+        color 150ms ease-in,
+        transform 150ms ease-in,
+        box-shadow 150ms ease-in;
+}
+
+form input[type="button"]:hover,
+form input[type="submit"]:hover {
+    background: #00ffff;
+    color: #121221;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .35);
+    transform: translateY(-1px);
+}
+
+form input[type="button"]:active,
+form input[type="submit"]:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+}
+
+
+
+/* GRUPO LABEL + SELECT DEL INICIO */
+.select_group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-family: sans-serif;
+}
+
+.select_label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.select_input {
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 2px solid #fff;
+    background: #121221;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select_input:hover {
+    border-color: rgba(255,255,255,0.6);
+}
+
+.select_input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 0 2px rgba(0,255,255,0.3);
+}
+/*END GRUPO LABEL + SELECT DEL INICIO */
 
 /*INPUTS*/
 .container_input {
-    width: 90%;
-    max-width: 10rem;
     height: 2rem;
     position: relative;
 }
@@ -47,7 +155,8 @@ form , .contenido{
     left: 1em;
     top: .75em;
     cursor: text;
-    transition: top 350ms ease-in, font-size 350ms ease-in;
+    transition: top 350ms ease-in, 
+        font-size 350ms ease-in;
 
 }
 
@@ -60,10 +169,10 @@ form , .contenido{
 }
 
 input[type="text"]:focus ~ label,
-.form_input:not(:placeholder-shown)
-.form_input:not(:focus) ~ label {
+input[type="number"]:focus ~ label,
+.form_input:not(:placeholder-shown).form_input:not(:focus) ~ label {
     top: -0.5em;
-    font-size: .75rem;
+    font-size: 0.75rem;
     padding: 0 0.125em;
 }
 

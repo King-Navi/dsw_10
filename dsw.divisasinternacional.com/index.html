@@ -14,27 +14,33 @@
     </header>
     <main class="contenido">
         <form onsubmit="return convertir(event)">
-            <label for="opt_origen">Moneda Origen: *</label>
-            <select id="opt_origen" required>
-            </select>
-            <label for="opt_destino">Moneda Destino: *</label>
-            <select id="opt_destino" required>
-            </select>
-            <div class="container_input">
-                <label class="label_input" for="txt_importe">Importe: *</label>
-                <input class="form_input" type="number" id="txt_importe" placeholder="Introduce el importe" step="any"
-                    required>
+            <div class="select_group">
+                <label class="select_label" for="opt_origen">Moneda Origen: *</label>
+                <select id="opt_origen" class="select_input" required>
+                </select>
+            </div>
+
+            <div class="select_group">
+                <label class="select_label" for="opt_destino">Moneda Destino: *</label>
+                <select id="opt_destino" class="select_input" required>
+                </select>
             </div>
             <div class="container_input">
+
+                <input class="form_input" type="number" id="txt_importe" placeholder=" " step="any" required>
+                <label class="label_input" for="txt_importe">Importe: *</label>
+            </div>
+            <div class="container_input">
+                <input class="resultado form_input" type="text" id="txt_tasa" placeholder="Tasa de cambio" readonly>
                 <label class="label_input" for="txt_tasa">Tasa de cambio:</label>
-                <input class="resultado form_input" type="text" id="txt_tasa" readonly>
 
             </div>
-            <div>
-                <label for="txt_resultado">Resultado:</label>
-                <input class="resultado" type="text" id="txt_resultado" readonly>
+            <div class="container_input">
+                <input class="resultado form_input" type="text" id="txt_resultado" placeholder="Resultado" readonly>
+                <label class="label_input for=" txt_resultado">Resultado:</label>
             </div>
-            <div> <input type="button" value="Invertir" onclick="invertir()" />
+            <div>
+                <input type="button" value="Invertir" onclick="invertir()" />
                 <input type="submit" value="Convertir" />
             </div>
         </form>
